@@ -1,15 +1,34 @@
 <template>
   <div class="m-header">
-    <div class="icon"></div>
-    <h1 class="text">Chicken Music</h1>
+    <div class="changeLanguage" @click="changeLanguage">中文</div>
+    <h1 class="text">Music</h1>
     <router-link tag="div" class="mine" to="/user">
       <i class="icon-mine"></i>
     </router-link>
   </div>
-</template>
+</template>   
 
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+    data () {
+      return {
+
+      }
+    },
+    methods: {
+      changeLanguage () {
+        // this.$confirm('确定要切换吗？', '提示', {
+        //   confirmButtonText: '确定',
+        //   cancelButtonText: '取消',
+        //   type: 'warning'
+        // }).then(() => {
+
+        // }).catch(() => {
+
+        // })
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
@@ -31,6 +50,14 @@
       margin-right: 9px
       bg-image('logo')
       background-size: 30px 32px
+    .changeLanguage
+      display: inline-block
+      vertical-align: top
+      line-height: 44px
+      float: left 
+      position: absolute
+      left: 20px
+      font-size: $font-size-small
     .text
       display: inline-block
       vertical-align: top
